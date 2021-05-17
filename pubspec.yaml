@@ -16,21 +16,6 @@ dependencies:
   easy_mask: ^1.1.5
   provider: ^4.3.3
 
-  # design system
-  cargo:
-    path: ../../cargo
-
-  # core
-  core:
-    path: ../../core
-
-  # services
-  crash_reporter:
-    path: ../../services/crash_reporter
-
-  network:
-    path: ../../services/network
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

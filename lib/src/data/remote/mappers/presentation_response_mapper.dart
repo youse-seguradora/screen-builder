@@ -1,4 +1,4 @@
-import 'package:core/core.dart';
+import 'package:screen_builder/src/utils/mapper.dart';
 
 import '../../../domain/models/presentation.dart';
 import '../models/presentation_response.dart';

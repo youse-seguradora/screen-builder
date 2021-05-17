@@ -9,18 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
-  dio: ^3.0.10
 
-  # design system
-  cargo:
-    path: ../../../cargo
+  dio: ^3.0.10
 
   screen_builder:
     path: ../
-
-  network:
-    path: ../../../services/network
 
 dev_dependencies:
   flutter_test:

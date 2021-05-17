@@ -8,10 +8,12 @@ class DefaultScreen implements BaseScreen {
   @override
   Widget build(BuildContext context, Widget appBar, List<Widget> content) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: appBar,
-      ),
+      appBar: appBar != null
+          ? PreferredSize(
+              preferredSize: const Size.fromHeight(kToolbarHeight),
+              child: appBar,
+            )
+          : null,
       body: WillPopScope(
         onWillPop: () => null,
         child: LayoutBuilder(builder: (context, viewportConstraints) {

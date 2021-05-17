@@ -23,18 +23,20 @@ abstract class Parser<T extends Widget> {
   /// Find the parser corresponding to the [component] and call
   /// the [parseComponent()] method to return the widget.
   static Widget parse(Component component, {BuildContext context}) {
-    final Parser parser = ScreenBuilder.listParser[component.name];
-    final ClickListener listener =
-        ScreenBuilder.listEventListeners[component?.action?.type];
-    if (parser != null) {
-      if (context == null) {
-        return Builder(
-          builder: (context) {
-            return parser.parseComponent(component, listener, context);
-          },
-        );
-      } else {
-        return parser.parseComponent(component, listener, context);
+    if (component != null) {
+      final Parser parser = ScreenBuilder.listParser[component.name];
+      final ClickListener listener =
+          ScreenBuilder.listEventListeners[component?.action?.type];
+      if (parser != null) {
+        if (context == null) {
+          return Builder(
+            builder: (context) {
+              return parser.parseComponent(component, listener, context);
+            },
+          );
+        } else {
+          return parser.parseComponent(component, listener, context);
+        }
       }
     }
 

@@ -1,8 +1,9 @@
-import 'package:cargo/cargo.dart';
 import 'package:flutter/material.dart';
 import 'package:screen_builder/screen_builder.dart' as builder;
 
 import 'src/data/screen_remote_service.dart';
+import 'src/domain/listeners/listeners.dart';
+import 'src/domain/parsers/parsers.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,16 +13,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ThemeProvider(
-      theme: ThemeDefault(),
-      child: Builder(builder: (context) {
-        final YouseTheme theme = YouseTheme.of(context);
-        return MaterialApp(
-          title: "ScreenBuilderExample",
-          theme: getThemeData(theme),
-          home: const ScreenBuilderExample(),
-        );
-      }),
+    return MaterialApp(
+      title: "ScreenBuilderExample",
+      theme: ThemeData.light(),
+      home: const ScreenBuilderExample(),
     );
   }
 }
@@ -33,8 +28,14 @@ class ScreenBuilderExample extends StatelessWidget {
   Widget build(BuildContext context) {
     final builder.ScreenBuilder screenBuilder =
         builder.ScreenBuilder.getInstance(
-      parsers: builder.parsers,
-      listeners: builder.listeners,
+      parsers: {
+        'app_bar': AppBarParser(),
+        'button': ButtonParser(),
+        'text': TextParser(),
+      },
+      listeners: {
+        'print': PrintClickListener(),
+      },
     );
 
     return FutureBuilder(
@@ -48,10 +49,7 @@ class ScreenBuilderExample extends StatelessWidget {
         }
 
         if (snapshot.hasData) {
-          return screenBuilder.build(
-            screen: snapshot.data,
-            context: context
-          );
+          return screenBuilder.build(screen: snapshot.data, context: context);
         }
 
         return Scaffold(
@@ -64,7 +62,8 @@ class ScreenBuilderExample extends StatelessWidget {
 
   Future<builder.Screen> _getFeature() async {
     final ScreenRemoteService service = ScreenRemoteService();
-    final builder.Presentation presentation = await service.getFeature();
+    final builder.Presentation presentation = await service.getFeature(
+        feature: 'https://demo5075457.mockable.io/screen-builder/exemple');
     return presentation.screen;
   }
 }

@@ -1,6 +1,5 @@
 library screen_builder;
 
-import 'package:cargo/cargo.dart';
 import 'package:flutter/material.dart';
 
 import 'domain/exceptions/parser_exception.dart';
@@ -74,7 +73,8 @@ class ScreenBuilder {
     @required BuildContext context,
   }) {
     currentContext = context;
-    final Widget appBar = _parseComponent(screen.appBar, context);
+    final Widget appBar =
+        screen.appBar != null ? _parseComponent(screen.appBar, context) : null;
     final List<Widget> content = screen.content.map((component) {
       return _parseComponent(component, context);
     }).toList();
@@ -98,9 +98,9 @@ class ScreenBuilder {
     BuildContext context,
   ) {
     final Container errorWidget = Container(
-      color: YouseTheme.of(context).error,
+      color: Theme.of(context).errorColor,
       alignment: Alignment.center,
-      padding: const EdgeInsets.all(Spacing.of_4),
+      padding: const EdgeInsets.all(16),
       child: const Text("Invalid component"),
     );
 
@@ -108,7 +108,7 @@ class ScreenBuilder {
       return Parser.parse(component);
     } on ParserException catch (e) {
       // TODO: add crash_reporter
-      print('${e.message}: ${component.name})');
+      print('${e.message}: ${component?.name})');
       return errorWidget;
     } on Exception catch (e) {
       // TODO: add crash_reporter
