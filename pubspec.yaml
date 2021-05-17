@@ -1,0 +1,38 @@
+name: screen_builder
+description: A new Flutter package project.
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  dio: ^3.0.10
+  easy_mask: ^1.1.5
+  provider: ^4.3.3
+
+  # design system
+  cargo:
+    path: ../../cargo
+
+  # core
+  core:
+    path: ../../core
+
+  # services
+  crash_reporter:
+    path: ../../services/crash_reporter
+
+  network:
+    path: ../../services/network
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+
