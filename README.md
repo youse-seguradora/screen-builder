@@ -154,3 +154,10 @@ FutureBuilder(
 </td>
 </tr>
 </table>
+
+# Next Jobs - TODO
+
+- Try to change `Parser.parse` from static to not static to be testable.
+- Use template method on some similar parser to reuse code.
+- Change the map of parsers so something better than to add each parser there.
+
