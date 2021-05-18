@@ -106,8 +106,6 @@ FutureBuilder(
 
 # Example
 
-## Examples
-
 <table>
 <tr>
 <th>Example Screen</th>
@@ -116,10 +114,9 @@ FutureBuilder(
 <tr>
 <td>
 <pre>
-<img src="./prints/example-01.png", width="50%">
+<img src="./prints/example-01.png", width="100%">
 </pre>
 </td>
-
 <td>
 <pre>
 {
@@ -155,6 +152,5 @@ FutureBuilder(
 }
 </pre>
 </td>
-
 </tr>
 </table>
