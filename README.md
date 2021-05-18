@@ -106,8 +106,6 @@ FutureBuilder(
 
 # Example
 
-## Examples
-
 <table>
 <tr>
 <th>Example Screen</th>
