@@ -22,6 +22,7 @@ import '../models/component.dart';
 abstract class Parser<T extends Widget> {
   /// Find the parser corresponding to the [component] and call
   /// the [parseComponent()] method to return the widget.
+  //TODO: Try to create a method without be static to be testable.
   static Widget parse(Component component, {BuildContext context}) {
     if (component != null) {
       final Parser parser = ScreenBuilder.listParser[component.name];
