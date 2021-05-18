@@ -103,3 +103,58 @@ FutureBuilder(
       },
     );
 ```
+
+# Example
+
+## Examples
+
+<table>
+<tr>
+<th>Example Screen</th>
+<th>Example Json</th>
+</tr>
+<tr>
+<td>
+<pre>
+<img src="./prints/example-01.png", width="50%">
+</pre>
+</td>
+
+<td>
+<pre>
+{
+    "version": "1",
+    "module": "Quotation",
+    "theme": "default",
+    "screen": {
+        "name": "QuotationScreen",
+        "app_bar": {
+            "name": "app_bar",
+            "properties": {
+                "center_title": false
+            },
+            "data": {
+                "title": "Exemplo"
+            },
+            "action": {
+                "type": "print"
+            }
+        },
+        "content": [
+            {
+                "name": "text",
+                "properties": {
+                    "font_size": 24.0
+                },
+                "data": {
+                    "text": "Exemplo de parser"
+                }
+            }
+        ]
+    }
+}
+</pre>
+</td>
+
+</tr>
+</table>
