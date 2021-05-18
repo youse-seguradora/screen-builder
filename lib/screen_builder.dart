@@ -6,6 +6,7 @@ export 'src/data/remote/models/action_response.dart';
 export 'src/data/remote/models/component_response.dart';
 export 'src/data/remote/models/presentation_response.dart';
 export 'src/data/remote/models/screen_response.dart';
+export 'src/domain/exceptions/parser_exception.dart';
 export 'src/domain/listeners/click_listener.dart';
 export 'src/domain/models/action.dart';
 export 'src/domain/models/component.dart';
