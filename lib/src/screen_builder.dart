@@ -15,8 +15,16 @@ import 'presentation/base_screen.dart';
 /// pre-established models.
 class ScreenBuilder {
   static ScreenBuilder _instance;
+
+  /// [ScreenBuilder] instance current context.
   static BuildContext currentContext;
+
+  /// Map of parsers that are used to interpret
+  /// the screen json and transform in widgets.
   static Map<String, Parser> listParser;
+
+  /// Map of events/click/actions that are used to interpret
+  /// the screen json and transform in user actions handler.
   static Map<String, ClickListener> listEventListeners;
 
   /// A template screen where the widgets that have been parsed are embedded.
@@ -57,6 +65,8 @@ class ScreenBuilder {
     return _instance ??= ScreenBuilder._(baseScreen);
   }
 
+  /// Transform a [screen] object to a [Widget]
+  /// that can be used to mount the screen.
   Widget build({
     @required Screen screen,
     @required BuildContext context,
@@ -67,6 +77,11 @@ class ScreenBuilder {
         context: context,
       );
 
+  /// Transform a [screen] object to a [Widget]
+  /// that can be used to mount the screen.
+  ///
+  /// The [baseScreen] is used to wrap the [screen] widget.
+  /// Example: Wrap the [screen] with a Scaffold widget.
   Widget buildWithBaseScreen({
     @required BaseScreen baseScreen,
     @required Screen screen,
@@ -82,6 +97,9 @@ class ScreenBuilder {
     return baseScreen.build(context, appBar, content);
   }
 
+  /// Navigate to another [screen].
+  ///
+  /// It will replace the current screen for the given [screen].
   void navigateToScreen({
     @required Screen screen,
     @required BuildContext context,

@@ -1,12 +1,20 @@
 import 'component_response.dart';
 
+/// Screen json model representation.
 class ScreenResponse {
+  /// Screen name
   final String name;
+
+  /// Component to be used as app bar
   final ComponentResponse appBar;
+
+  /// List of components that will be rendered with this screen
   final List<ComponentResponse> content;
 
+  /// Provide [ScreenResponse] instance
   ScreenResponse(this.name, this.appBar, this.content);
 
+  /// Provide [ScreenResponse] instance from a [json]
   factory ScreenResponse.fromJson(Map<String, dynamic> json) {
     return ScreenResponse(
       json['name'] as String,

@@ -3,6 +3,8 @@ import '../../../utils/mapper.dart';
 import '../models/component_response.dart';
 import 'action_response_mapper.dart';
 
+/// [ComponentResponse] data layer model mapper
+/// to [Component] domain layer model.
 class ComponentResponseMapper implements Mapper<ComponentResponse, Component> {
   @override
   Component map(ComponentResponse type) => Component(

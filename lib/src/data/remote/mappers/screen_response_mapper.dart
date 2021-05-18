@@ -3,6 +3,8 @@ import '../../../utils/mapper.dart';
 import '../models/screen_response.dart';
 import 'component_response_mapper.dart';
 
+/// [ScreenResponse] data layer model mapper
+/// to [Screen] domain layer model.
 class ScreenResponseMapper implements Mapper<ScreenResponse, Screen> {
   @override
   Screen map(ScreenResponse type) => Screen(

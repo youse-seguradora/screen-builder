@@ -19,7 +19,7 @@ import '../models/action.dart';
 /// }
 /// ```
 /// {@end-tool}
-// ignore: one_member_abstracts
 abstract class ClickListener {
+  /// Method called on user interaction click.
   void onClicked(UserAction action, BuildContext context);
 }
