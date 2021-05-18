@@ -1,6 +1,5 @@
-import 'package:screen_builder/src/utils/mapper.dart';
-
 import '../../../domain/models/screen.dart';
+import '../../../utils/mapper.dart';
 import '../models/screen_response.dart';
 import 'component_response_mapper.dart';
 

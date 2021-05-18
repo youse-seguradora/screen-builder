@@ -19,6 +19,7 @@ import '../models/action.dart';
 /// }
 /// ```
 /// {@end-tool}
+// ignore: one_member_abstracts
 abstract class ClickListener {
   void onClicked(UserAction action, BuildContext context);
 }

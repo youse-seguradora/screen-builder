@@ -1,6 +1,5 @@
-import 'package:screen_builder/src/utils/mapper.dart';
-
 import '../../../domain/models/action.dart';
+import '../../../utils/mapper.dart';
 import '../models/action_response.dart';
 
 class ActionResponseMapper implements Mapper<ActionResponse, UserAction> {
