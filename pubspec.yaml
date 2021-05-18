@@ -1,8 +1,8 @@
 name: screen_builder
 description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+version: 1.0.0-beta
+author: Mobile Chapter - Youse Seguros
+homepage: https://www.youse.com.br
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -11,10 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  dio: ^3.0.10
-  easy_mask: ^1.1.5
-  provider: ^4.3.3
 
 dev_dependencies:
   flutter_test:

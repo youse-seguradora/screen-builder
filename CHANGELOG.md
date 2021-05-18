@@ -1,3 +1,4 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0-beta] - may 17, 2021
 
-* TODO: Describe initial release.
+* Initial release.
+* Initial engine to interpret a json and display a screen.
