@@ -1,8 +1,10 @@
 name: screen_builder
-description: A new Flutter package project.
+description: A server ui driven flutter engine package.
 version: 1.0.0-beta
 author: Mobile Chapter - Youse Seguros
-homepage: https://www.youse.com.br
+homepage: https://github.com/youse-seguradora/mob-flutter-screen-builder
+repository: https://github.com/youse-seguradora/mob-flutter-screen-builder
+publish_to: https://pub.dev/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
