@@ -4,6 +4,7 @@ version: 1.0.0-beta
 author: Mobile Chapter - Youse Seguros
 homepage: https://github.com/youse-seguradora/mob-flutter-screen-builder
 repository: https://github.com/youse-seguradora/mob-flutter-screen-builder
+publish_to: https://pub.dev/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
