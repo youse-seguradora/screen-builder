@@ -13,10 +13,10 @@ import '../models/component.dart';
 /// {@tool snippet}
 ///
 /// This example shows how to create a class that parses a [Component] to return
-/// YouseTitle widget.
+/// Text widget.
 ///
 /// ```dart
-/// class TitleParser implements Parser<YouseTitle> {}
+/// class TitleParser implements Parser<Text> {}
 /// ```
 /// {@end-tool}
 abstract class Parser<T extends Widget> {
