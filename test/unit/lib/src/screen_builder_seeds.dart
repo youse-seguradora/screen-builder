@@ -1,19 +1,19 @@
 class ScreenBuilderSeeds {
   // Container Tests Seeds
   static const Map<String, dynamic> containerPropertiesMap = {
-    'left': '04',
-    'right': '04',
-    'bottom': '04',
-    'top': '04',
-    'height': '04',
+    'left': 16.0,
+    'right': 16.0,
+    'bottom': 16.0,
+    'top': 16.0,
+    'height': 16.0,
   };
 
   // EdgeInsets Tests Seeds
   static const Map<String, dynamic> edgeInsetsPropertiesMap = {
-    'left': '04',
-    'right': '04',
-    'bottom': '04',
-    'top': '04',
+    'left': 16.0,
+    'right': 16.0,
+    'bottom': 16.0,
+    'top': 16.0,
   };
 
   // Icon Button Tests Seeds
@@ -24,7 +24,8 @@ class ScreenBuilderSeeds {
 
   // Sized Box Tests Seeds
   static const Map<String, dynamic> sizedBoxPropertiesMap = {
-    'spacing': '04',
+    'width': 16.0,
+    'height': 16.0,
     'orientation': 'vertical',
   };
 }
