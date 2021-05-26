@@ -13,4 +13,5 @@ export 'src/domain/models/component.dart';
 export 'src/domain/models/presentation.dart';
 export 'src/domain/models/screen.dart';
 export 'src/domain/parsers/parser.dart';
+export 'src/presentation/parsers/parsers.dart';
 export 'src/screen_builder.dart';
