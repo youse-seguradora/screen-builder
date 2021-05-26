@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Map of String - IconData to map a String and it correspondent IconData.
 const Map<String, IconData> icons = <String, IconData>{
   'ac_unit': Icons.ac_unit,
   'access_alarm': Icons.access_alarm,

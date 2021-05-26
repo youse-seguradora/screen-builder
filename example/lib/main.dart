@@ -9,6 +9,7 @@ void main() {
   runApp(MyApp());
 }
 
+// ignore: public_member_api_docs
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// ignore: public_member_api_docs
 class ScreenBuilderExample extends StatelessWidget {
+  // ignore: public_member_api_docs
   const ScreenBuilderExample();
 
   @override
@@ -53,7 +56,7 @@ class ScreenBuilderExample extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(title: const Text("Teste")),
-          body: const Center(child: const CircularProgressIndicator()),
+          body: const Center(child: CircularProgressIndicator()),
         );
       },
     );

@@ -1,6 +1,9 @@
 import 'package:flutter/widgets.dart';
-import 'package:screen_builder/screen_builder.dart';
 
+import '../../../../screen_builder.dart';
+
+/// [Parser] responsible for interpret a JSON and return a Flutter Row
+/// Widget.
 class RowParser implements Parser<Row> {
   @override
   Row parseComponent(

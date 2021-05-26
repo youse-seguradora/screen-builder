@@ -1,10 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:screen_builder/screen_builder.dart';
+import '../../../../../screen_builder.dart';
 
 import 'icon_button_properties.dart';
 
+/// [Parser] responsible for interpret a JSON and return a Flutter IconButton
+/// Widget.
 class IconButtonParser implements Parser<IconButton> {
   @override
   IconButton parseComponent(

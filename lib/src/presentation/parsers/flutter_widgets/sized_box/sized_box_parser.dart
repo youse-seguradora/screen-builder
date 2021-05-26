@@ -1,9 +1,10 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:screen_builder/screen_builder.dart';
-
+import '../../../../../screen_builder.dart';
 import 'sized_box_properties.dart';
 
+/// [Parser] responsible for interpret a JSON and return a Flutter SizedBox
+/// Widget.
 class SizedBoxParser implements Parser<SizedBox> {
   @override
   SizedBox parseComponent(

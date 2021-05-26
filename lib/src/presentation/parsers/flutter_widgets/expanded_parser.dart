@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import '../../../../screen_builder.dart';
 import '../../../utils/list_extension.dart';
 
+/// [Parser] responsible for interpret a JSON and return a Flutter Expanded
+/// Widget.
 class ExpandedParser implements Parser<Expanded> {
   @override
   Expanded parseComponent(

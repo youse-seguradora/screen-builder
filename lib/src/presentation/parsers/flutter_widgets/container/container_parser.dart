@@ -4,6 +4,8 @@ import '../../../../../screen_builder.dart';
 import '../../../../utils/list_extension.dart';
 import 'container_properties.dart';
 
+/// [Parser] responsible for interpret a JSON and return a Flutter Container
+/// Widget.
 class ContainerParser implements Parser<Container> {
   @override
   Container parseComponent(

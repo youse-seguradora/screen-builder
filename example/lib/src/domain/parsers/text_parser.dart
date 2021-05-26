@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:screen_builder/screen_builder.dart';
 
+// ignore: public_member_api_docs
 class TextParser implements Parser<Text> {
   @override
   Text parseComponent(
